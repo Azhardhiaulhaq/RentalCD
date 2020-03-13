@@ -33,7 +33,8 @@ class TableRental extends Migration
             $table->string('title');
             $table->dateTime('date_rent');
             $table->dateTime('date_return');
-            $table->integer('total');
+            $table->string('category');
+            $table->integer('quantity');
         });
     }
 
