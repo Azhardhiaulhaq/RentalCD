@@ -1,24 +1,30 @@
-# Lumen PHP Framework
+# Rental CD API
 
-[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
-[![Total Downloads](https://poser.pugx.org/laravel/lumen-framework/d/total.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/lumen-framework/v/stable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![License](https://poser.pugx.org/laravel/lumen-framework/license.svg)](https://packagist.org/packages/laravel/lumen-framework)
+RentalCD adalah sebuah API yang berfungsi untuk membantu pemilik toko RentalCD. Owner dari toko dapat memasukkan CD baru maupun mengupdate data kuantitas dari CD yang sudah ada. Sementara customer, dapat meminjam CD dan mengembalikan CD.
 
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
+## Cara Penggunaan
 
-## Official Documentation
+1. Clone Repository ini ke local
 
-Documentation for the framework can be found on the [Lumen website](https://lumen.laravel.com/docs).
+2. Kemudian masuk ke folder RentalCD
 
-## Contributing
+> cd/RentalCD
 
-Thank you for considering contributing to Lumen! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+3. Lakukan Migrasi Database dengan mengetikkan
 
-## Security Vulnerabilities
+> php artisan make:migration create_user_table
 
-If you discover a security vulnerability within Lumen, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
 
-## License
+4. Jalankan seeding dari Database (Untuk mengisi Table yang telah dibuat)
 
-The Lumen framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+> php artisan db:seed --force
+
+5. Jalankan API dengan cara :
+
+> php -S localhost:8000 -t ./public
+
+6. Untuk perintah apa saja yang dapat dijalankan di API ini, dapat melihat blueprint API yang dapat diakses pada tautan berikut :
+
+https://app.swaggerhub.com/apis-docs/Azhardhiaulhaq/RentalCD/1.0.0
+
+
