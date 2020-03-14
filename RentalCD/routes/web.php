@@ -15,7 +15,7 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-$router->get('/user','UserController@getAllUser');
+$router->get('/user/all','UserController@getAllUser');
 $router->get('/user','UserController@getUser');
 $router->post('/user','UserController@addUser');
 $router->get('/cd','CDController@getAllCD');

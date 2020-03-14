@@ -18,4 +18,12 @@ class ExampleTest extends TestCase
             $this->app->version(), $this->response->getContent()
         );
     }
+
+    public function testAddUser(){
+        $response = $this->call('POST','/user',['username' => 'Dhiaulhaq','password'=>'12345','role'=>'customer']);
+
+        $this->assertEquals($response->content(),200);
+    }
+
+    
 }

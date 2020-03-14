@@ -13,7 +13,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call('UsersTableSeeder');
+
         DB::table('rental_user')->insert([
             'username' => 'AzharDhiaulhaq',
             'password' => 'Azhar@tantowi.com',

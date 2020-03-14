@@ -24,7 +24,6 @@ class UserController extends Controller
     */
     public function getAllUser(){
         return response()->json($data = UserModel::all());
-        
     }
     /*
     Input = parameter username
@@ -34,7 +33,7 @@ class UserController extends Controller
     public function getUser(Request $request){
         $username = $request->input('username');
         $data = UserModel::where('username',$username)->get();
-        return response ($data);
+        return response()->json(['user' => $data]);
     }
 
     /*
@@ -50,6 +49,7 @@ class UserController extends Controller
         $data->save();
 
         return response('Succesfully added Data',200);
+        
     }
     //
 }

@@ -76,7 +76,7 @@ class RentController extends Controller
         $CD->first()->save();
         return response('Succesfully added Data',200);
     }
-    
+
     /*
     Input = Parameter title dan username
     Output = Total Harga yang harus dibayar
@@ -87,7 +87,7 @@ class RentController extends Controller
         $title = $request->input('title');
         $rent = RentModel::where('username',$username)->where('title',$title)->first();
         if (!is_null($rent->date_return) && !is_null($rent->total)){
-            return response('The Book Has Been Returned',404);
+            return response('The CD Has Been Returned',404);
         }
         $CD = CDModel::where('title',$title)->get();
         if($CD->count() == 0 ){
@@ -103,7 +103,7 @@ class RentController extends Controller
         $rent->total = $diff * $CD->first()->rate;
         $rent->save();
 
-        return response($rent->total);
+        return response('Succesfully Updated Data',200);
     }
     //
 }
