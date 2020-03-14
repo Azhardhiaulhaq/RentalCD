@@ -8,7 +8,7 @@ RentalCD adalah sebuah API yang berfungsi untuk membantu pemilik toko RentalCD. 
 
 2. Kemudian masuk ke folder RentalCD
 
-> cd/RentalCD
+> cd RentalCD
 
 3. Lakukan Migrasi Database dengan mengetikkan
 
