@@ -22,3 +22,7 @@ $router->get('/cd','CDController@getAllCD');
 $router->get('/cd/{title}','CDController@getCD');
 $router->post('/cd','CDController@addCD');
 $router->put('/cd/{title}','CDController@updateCD');
+$router->post('/rent','RentController@rentCD');
+$router->put('/rent','RentController@returnCD');
+$router->get('/rent','RentController@getAllRent');
+$router->get('/rent','RentController@getRent');

@@ -17,7 +17,6 @@ class TableRental extends Migration
             $table->increments('id');
             $table->string('username');
             $table->string('password');
-            $table->string('auth_key');
             $table->string('role');
         });
 
@@ -31,12 +30,11 @@ class TableRental extends Migration
 
         Schema::create('rent', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('user');
+            $table->string('username');
             $table->string('title');
             $table->dateTime('date_rent');
-            $table->dateTime('date_return');
-            $table->string('category');
-            $table->integer('quantity');
+            $table->dateTime('date_return')->nullable();
+            $table->integer('total')->nullable();
         });
     }
 
