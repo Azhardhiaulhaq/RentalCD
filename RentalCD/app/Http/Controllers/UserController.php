@@ -17,26 +17,35 @@ class UserController extends Controller
         //
     }
 
+    /*
+    Input = -
+    Output = JSON array of User Model.
+    Function = Untuk mendapatkan semua Data dari Table Rental_User
+    */
     public function getAllUser(){
         return response()->json($data = UserModel::all());
         
     }
-
+    /*
+    Input = parameter username
+    Output = JSON array of User Model.
+    Function = Untuk mendapatkan Data dari Table Rental_User dengan username tertentu
+    */
     public function getUser(Request $request){
         $username = $request->input('username');
-        $auth_key = $request->input('auth_key');
-        $data = UserModel::where('username',$username)->orWhere('auth_key',$auth_key)->get();
+        $data = UserModel::where('username',$username)->get();
         return response ($data);
     }
 
-
+    /*
+    Input = parameter username,password,dan role
+    Output = Pesan Berhasil
+    Function = Untuk mmenambahkan user baru
+    */
     public function addUser (Request $request){
-        
-
         $data = new UserModel();
         $data->username = $request->input('username');
         $data->password = $request->input('password');
-        $data->auth_key = $request->input('auth_key');
         $data->role = $request->input('role');
         $data->save();
 

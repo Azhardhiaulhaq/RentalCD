@@ -76,6 +76,7 @@ class RentController extends Controller
         $CD->first()->save();
         return response('Succesfully added Data',200);
     }
+    
     /*
     Input = Parameter title dan username
     Output = Total Harga yang harus dibayar
