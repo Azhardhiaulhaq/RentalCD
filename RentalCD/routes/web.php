@@ -18,3 +18,7 @@ $router->get('/', function () use ($router) {
 $router->get('/user','UserController@getAllUser');
 $router->get('/user','UserController@getUser');
 $router->post('/user','UserController@addUser');
+$router->get('/cd','CDController@getAllCD');
+$router->get('/cd/{title}','CDController@getCD');
+$router->post('/cd','CDController@addCD');
+$router->put('/cd/{title}','CDController@updateCD');

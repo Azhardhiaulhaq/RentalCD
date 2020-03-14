@@ -14,6 +14,7 @@ class TableRental extends Migration
     public function up()
     {
         Schema::create('rental_user', function (Blueprint $table) {
+            $table->increments('id');
             $table->string('username');
             $table->string('password');
             $table->string('auth_key');
@@ -21,6 +22,7 @@ class TableRental extends Migration
         });
 
         Schema::create('rental_cd', function (Blueprint $table) {
+            $table->increments('id');
             $table->string('title');
             $table->integer('rate');
             $table->string('category');
@@ -28,7 +30,7 @@ class TableRental extends Migration
         });
 
         Schema::create('rent', function (Blueprint $table) {
-            $table->integer('idrent');
+            $table->increments('id');
             $table->string('user');
             $table->string('title');
             $table->dateTime('date_rent');
