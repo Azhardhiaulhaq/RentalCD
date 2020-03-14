@@ -27,4 +27,8 @@ RentalCD adalah sebuah API yang berfungsi untuk membantu pemilik toko RentalCD. 
 
 https://app.swaggerhub.com/apis-docs/Azhardhiaulhaq/RentalCD/1.0.0
 
+## Author
+
+Moch. Azhar Dhiaulhaq
+Institut Teknologi Bandung
 
