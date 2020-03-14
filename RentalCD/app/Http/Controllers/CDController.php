@@ -25,7 +25,6 @@ class CDController extends Controller
     */
     public function getAllCD(){
         return response()->json($data = CDModel::all());
-        
     }
 
     /*

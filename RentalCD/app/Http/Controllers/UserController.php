@@ -51,5 +51,6 @@ class UserController extends Controller
         return response('Succesfully added Data',200);
         
     }
+
     //
 }
